@@ -1,0 +1,115 @@
+/* IntroDemo-BlackCAPS */
+@font-face {
+  font-display: swap;
+	font-family: 'IntroDemo-BlackCAPS';
+	src: url('../fonts/introdemo-blackcaps.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/introdemo-blackcaps.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/introdemo-blackcaps.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/introdemo-blackcaps.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/introdemo-blackcaps.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/introdemo-blackcaps.svg#introdemo-blackcaps') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+/* inter-regular - cyrillic */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v12-cyrillic-regular.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/inter-v12-cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/inter-v12-cyrillic-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/inter-v12-cyrillic-regular.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/inter-v12-cyrillic-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/inter-v12-cyrillic-regular.svg#Inter') format('svg');
+  /* Legacy iOS */
+}
+
+/* inter-500 - cyrillic */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/inter-v12-cyrillic-500.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/inter-v12-cyrillic-500.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/inter-v12-cyrillic-500.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/inter-v12-cyrillic-500.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/inter-v12-cyrillic-500.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/inter-v12-cyrillic-500.svg#Inter') format('svg');
+  /* Legacy iOS */
+}
+
+/* inter-600 - cyrillic */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/inter-v12-cyrillic-600.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/inter-v12-cyrillic-600.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/inter-v12-cyrillic-600.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/inter-v12-cyrillic-600.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/inter-v12-cyrillic-600.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/inter-v12-cyrillic-600.svg#Inter') format('svg');
+  /* Legacy iOS */
+}
+
+/* inter-700 - cyrillic */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter-v12-cyrillic-700.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/inter-v12-cyrillic-700.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/inter-v12-cyrillic-700.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/inter-v12-cyrillic-700.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/inter-v12-cyrillic-700.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/inter-v12-cyrillic-700.svg#Inter') format('svg');
+  /* Legacy iOS */
+}
+
+/* inter-800 - cyrillic */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/inter-v12-cyrillic-800.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/inter-v12-cyrillic-800.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/inter-v12-cyrillic-800.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/inter-v12-cyrillic-800.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/inter-v12-cyrillic-800.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/inter-v12-cyrillic-800.svg#Inter') format('svg');
+  /* Legacy iOS */
+}
