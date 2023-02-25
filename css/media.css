@@ -385,6 +385,61 @@
     text-align: center;
   }
 
+  /*header*/
+  .header__nav {
+    padding: 22px 43px 25px 26px;
+  }
+
+  .header__nav .nav__list {
+    max-width: 160px;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  
+  .header__nav .nav__link {
+    font-size: 14px;
+  }
+  
+  .header__nav .contacts {
+    max-width: 180px;
+  }
+  .header__nav .socials img {
+    width: 24px;
+  }
+  .header__nav .phone {
+    font-size: 14px;
+  }
+  .header__nav--active {
+    transform: translateX(0);
+  }
+
+  .header__nav-close {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    z-index: 11;
+    right: 12px;
+    top: 14px;
+  }
+
+  .header__nav-close-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header__nav-close-line:first-child {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .header__nav-close-line:last-child {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
   /*hero section*/
   .hero {
     padding-block: 94px 76px;

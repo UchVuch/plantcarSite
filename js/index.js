@@ -1,4 +1,16 @@
 function startApp() {
+  const buttonOpenMenu = document.querySelector(`[data-menu="open"]`)
+  const buttonCloseMenu = document.querySelector(`[data-menu="close"]`)
+  const menuLinks = document.querySelectorAll(`[data-menu-link]`)
+  const navMenu = document.querySelector(`[data-menu="menu"]`)
+
+  const openMenu = () => navMenu.classList.add('header__nav--active')
+  const closeMenu = () => navMenu.classList.remove('header__nav--active')
+
+  buttonOpenMenu.addEventListener('click', openMenu)
+  buttonCloseMenu.addEventListener('click', closeMenu)
+  menuLinks.forEach(link => link.addEventListener('click', closeMenu))
+
   const swiper = new Swiper(".mySwiper", {
     direction: 'vertical',
     slidesPerView: 4,
@@ -36,16 +48,6 @@ function startApp() {
       },
     }
   })
-
-  const buttonOpenMenu = document.querySelector(`[data-menu="open"]`)
-  const buttonCloseMenu = document.querySelector(`[data-menu="close"]`)
-  const navMenu = document.querySelector(`[data-menu="menu"]`)
-
-  const openMenu = () => navMenu.classList.add('header__nav--active')
-  const closeMenu = () => navMenu.classList.remove('header__nav--active')
-
-  buttonOpenMenu.addEventListener('click', openMenu)
-  buttonCloseMenu.addEventListener('click', closeMenu)
 }
 
 window.addEventListener('DOMContentLoaded', startApp)
