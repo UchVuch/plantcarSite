@@ -9,36 +9,55 @@
   <title>PLANTCAR</title>
   <link href="./css/fonts.css" rel="stylesheet">
   <link href="./css/reset.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <!-- <link href="./css/swiper-bundle.min.css" rel="stylesheet"> -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+  <link href="./css/swiper-bundle.min.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
-  <!-- <script defer src="./js/swiper-bundle.min.js"></script> -->
-  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link href="./css/media.css" rel="stylesheet">
+  <script defer src="./js/swiper-bundle.min.js"></script>
+  <!-- <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
   <script defer src="./js/index.js"></script>
 </head>
 
-<body>
+<body class="body">
   <header class="header">
     <div class="header__inner">
       <a class="logo" href="#!">
         <img src="./images/logo.svg" alt="Логотип plantcar" width="253" height="23">
       </a>
-      <nav class="nav">
+      <nav class="nav header__nav" data-menu="menu">
         <ul class="nav__list">
           <li><a class="nav__link" href="#!">Наши преимущества</a></li>
           <li><a class="nav__link" href="#!">Наши услуги</a></li>
           <li><a class="nav__link" href="#!">Наши работы</a></li>
         </ul>
+        <div class="contacts">
+          <a class="phone" href="tel:+74950237780">+7 (495) 023-77-80</a>
+          <div class="socials">
+            <a class="socials__link" href="https://t.me/jameselbrother" title="Перейти в телеграм">
+              <img class="socials__image" src="./images/icons/telegram.svg" alt="Приложение телеграм">
+            </a>
+            <a class="socials__link" href="https://wa.me/79267902840" title="Перейти в вотсап">
+              <img class="socials__image" src="./images/icons/whatsapp.svg" alt="Приложение вотсап">
+            </a>
+          </div>
+        </div>
+        <div class="header__nav-close" data-menu="close">
+          <span class="header__nav-close-line"></span>
+          <span class="header__nav-close-line"></span>
+        </div>
       </nav>
-      <div class="contacts">
-        <a class="phone" href="+74950237780">+7 (495) 023-77-80</a>
-        <div class="socials">
-          <a class="socials__link" href="https://t.me/jameselbrother" title="Перейти в телеграм">
-            <img class="socials__image" src="./images/icons/telegram.svg" alt="Приложение телеграм">
-          </a>
-          <a class="socials__link" href="https://wa.me/79267902840" title="Перейти в вотсап">
-            <img class="socials__image" src="./images/icons/whatsapp.svg" alt="Приложение вотсап">
-          </a>
+      <div class="mobile__nav">
+        <a class="mobile__nav-phone" href="tel:+74950237780">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.95 21C20.25 21 20.5 20.9 20.7 20.7C20.9 20.5 21 20.25 21 19.95V15.9C21 15.6667 20.925 15.4623 20.775 15.287C20.625 15.1123 20.4333 15 20.2 14.95L16.75 14.25C16.5167 14.2167 16.279 14.2373 16.037 14.312C15.7957 14.3873 15.6 14.5 15.45 14.65L13.1 17C11.8333 16.2333 10.675 15.325 9.625 14.275C8.575 13.225 7.7 12.1 7 10.9L9.4 8.45C9.55 8.3 9.646 8.129 9.688 7.937C9.72933 7.74567 9.73333 7.53333 9.7 7.3L9.05 3.8C9.01667 3.56667 8.90833 3.375 8.725 3.225C8.54167 3.075 8.33333 3 8.1 3H4.05C3.75 3 3.5 3.1 3.3 3.3C3.1 3.5 3 3.75 3 4.05C3 6.2 3.47933 8.29567 4.438 10.337C5.396 12.379 6.66267 14.1873 8.238 15.762C9.81267 17.3373 11.6207 18.604 13.662 19.562C15.704 20.5207 17.8 21 19.95 21Z"
+              fill="white" />
+          </svg>
+        </a>
+        <div class="burger-menu" data-menu="open">
+          <span class="burger-menu-item burger-menu-item-first"></span>
+          <span class="burger-menu-item burger-menu-item-second"></span>
+          <span class="burger-menu-item burger-menu-item-third"></span>
         </div>
       </div>
     </div>
@@ -55,15 +74,15 @@
             <ul class="hero__list">
               <li class="hero__item">
                 <p class="hero__item-number">10</p>
-                <p>лет специализируемся только на кузовном ремонте</p>
+                <p class="hero__item-text">лет специализируемся только на кузовном ремонте</p>
               </li>
               <li class="hero__item">
                 <p class="hero__item-number">10 000</p>
-                <p>автомобилей отремонтировано за все время</p>
+                <p class="hero__item-text">автомобилей отремонтировано за все время</p>
               </li>
               <li class="hero__item">
                 <p class="hero__item-number">75%</p>
-                <p>клиентов чинят у нас по рекомендациям друзей</p>
+                <p class="hero__item-text">клиентов чинят у нас по рекомендациям друзей</p>
               </li>
             </ul>
           </div>

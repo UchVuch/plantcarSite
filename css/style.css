@@ -10,7 +10,7 @@
 }
 
 /* Global */
-body {
+.body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -19,6 +19,7 @@ body {
   color: var(--text);
   min-width: 280px;
   background-color: var(--bg);
+  position: relative;
 }
 
 img {
@@ -184,20 +185,26 @@ img {
   background-color: rgba(0, 0, 0, 0.49);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  padding: 24px 60px 21px;
+  padding-block: 24px 21px;
+  padding-inline: var(--container-padding)
 }
 
 .header__inner {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
 }
 
+.header__nav {
+  max-width: 848px;
+  width: 100%;
+}
+
 .nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav__list {
@@ -220,18 +227,36 @@ img {
   color: var(--primary);
 }
 
-.burger-menu {
+.mobile__nav {
   display: none;
+}
+
+.mobile__nav-phone {
+  height: 35px;
+  margin-right: 22px;
+}
+
+.mobile__nav-phone svg {
+  width: 50px;
+  height: 100%;
+}
+
+.mobile__nav-phone path {
+  fill: var(--primary);
+}
+
+.burger-menu {
+  display: block;
   position: relative;
-  height: 2.5rem;
-  width: 4.35rem;
+  height: 35px;
+  width: 50px;
 }
 
 .burger-menu-item {
   display: block;
   width: 100%;
   height: 0.3rem;
-  background-color: #45484d;
+  background-color: var(--primary);
   position: absolute;
   left: 0;
   border-radius: 3px;
@@ -248,85 +273,6 @@ img {
 
 .burger-menu-item-third {
   bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .header {
-    padding: 1.625rem 2.1rem;
-  }
-
-  .login__icon {
-    margin-left: auto;
-  }
-
-  .burger-menu {
-    display: block;
-    margin-left: 2rem;
-  }
-
-  .header__nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translateX(-100%);
-    background-color: #171a21;
-    transition: all 0.3s;
-    z-index: 10;
-    overflow: scroll;
-    display: flex;
-  }
-
-  .header__nav ul {
-    flex-direction: column;
-    padding: 2rem 0 0 4rem;
-  }
-
-  .header__nav a {
-    font-size: 2rem;
-  }
-
-  .header__list {
-    flex-direction: column;
-    padding: 3rem 0 0 3rem;
-  }
-
-  .header__list li {
-    margin-bottom: 2.5rem;
-    font-size: 3.5rem;
-  }
-
-  .header__nav-active {
-    transform: translateX(0);
-  }
-
-  .header__nav-close {
-    height: 2.5rem;
-    width: 4.35rem;
-    position: absolute;
-    z-index: 11;
-    right: 2.1rem;
-    top: 1.375rem;
-  }
-
-  .header__nav-close-line {
-    display: block;
-    width: 100%;
-    height: 0.3rem;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .header__nav-close-line:first-child {
-    transform: translateY(-50%) rotate(45deg);
-  }
-
-  .header__nav-close-line:last-child {
-    transform: translateY(-50%) rotate(-45deg);
-  }
 }
 
 /*hero section*/
@@ -402,24 +348,28 @@ img {
 }
 
 .hero__item-number {
-  position: relative;
   font-size: 38px;
   line-height: 47px;
   text-shadow: 2px 2px var(--primary);
-  margin-bottom: 11px;
 }
 
-.hero__item-number::after {
+.hero__item-text {
+  position: relative;
+  padding-top: 11px;
+}
+
+.hero__item-text::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 0;
   width: 135px;
   border: 1px solid #C61010;
 }
 
 .hero__form {
   max-width: 309px;
+  margin-left: 25px;
 }
 
 /*about section*/
@@ -475,9 +425,9 @@ img {
   position: absolute;
   z-index: -1;
   top: 0;
-  right: -60px;
+  right: calc(var(--container-padding) * -1);
   bottom: 0;
-  left: -60px;
+  left: calc(var(--container-padding) * -1);
   background-color: rgba(59, 10, 126, 0.9);
   background-image: url(../images/remont-nissan.png);
   background-size: 923px 545px;
@@ -562,6 +512,19 @@ img {
 .portfolio__content {
   width: 100%;
   height: 780px;
+  position: relative;
+}
+
+.portfolio__content::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: 125px;
+  background-color: #EDEDED;
+  border-radius: 10px;
 }
 
 .portfolio__image {
@@ -784,6 +747,11 @@ img {
   margin-right: 103px;
 }
 
+.footer__logo img {
+  width: 341px;
+  height: 33px;
+}
+
 .footer__nav {
   margin-right: auto;
 }
@@ -831,9 +799,38 @@ img {
 
 @media (max-width: 1280px) {
 
+  /* hero section*/
+  .hero__content {
+    max-width: 800px;
+  }
+
+  .hero__title {
+    font-size: 75px;
+    line-height: 100px;
+  }
+
+  /*about section*/
+  .about__item {
+    width: 275px;
+    padding-inline: 15px;
+  }
+
+  /*services section*/
+  .services::before {
+    background-position-x: 130px;
+  }
+
+  .services__item:nth-child(-n+4) {
+    margin-left: 0;
+  }
+
+  .services__item:nth-child(1n+5) {
+    margin-right: 0;
+  }
+
   /*prortfolio section*/
   .portfolio__content {
-    height: 660px;
+    height: 675px;
   }
 
   .swiper-wrapper {
@@ -843,5 +840,22 @@ img {
   .swiper-slide {
     height: 100% !important;
     max-height: 160px !important;
+  }
+
+  /*send section*/
+  .send__content {
+    max-width: 660px;
+  }
+
+  .send__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  /*services section*/
+  .services::before {
+    background-position-x: 80px;
   }
 }
