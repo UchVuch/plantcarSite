@@ -9,9 +9,11 @@
   <title>PLANTCAR</title>
   <link href="./css/fonts.css" rel="stylesheet">
   <link href="./css/reset.css" rel="stylesheet">
-  <link href="./css/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- <link href="./css/swiper-bundle.min.css" rel="stylesheet"> -->
   <link href="./css/style.css" rel="stylesheet">
-  <script defer src="./js/swiper-bundle.min.js"></script>
+  <!-- <script defer src="./js/swiper-bundle.min.js"></script> -->
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script defer src="./js/index.js"></script>
 </head>
 
@@ -142,185 +144,216 @@
         <section class="portfolio">
           <h2 class="portfolio__title title text-primary">Наши работы</h2>
           <div class="portfolio__content">
-            <div class="swiper main-swiper">
-              <!-- Additional required wrapper -->
-
+            <div class="swiper mySwiper">
               <div class="swiper-wrapper">
-                <!-- Slides -->
                 <div class="swiper-slide">
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide3.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide3.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide3.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide3.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
+                  <img class="portfolio__image" src="./images/slide1.jpg" data-portfolio="1" alt="Изображение портволио"
+                    width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide3.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide3.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide3.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide3.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide1.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="portfolio__image">
-                    <img src="./images/slide2.jpg" loading="lazy" />
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="2" alt="Изображение портволио"
+                    width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="3" alt="Изображение портволио"
+                    width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="4" alt="Изображение портволио"
+                    width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="5" alt="Изображение портволио"
+                    width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide1.jpg" data-portfolio="6" alt="Изображение портволио"
+                    width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="7" alt="Изображение портволио"
+                    width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="8" alt="Изображение портволио"
+                    width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/slide2.jpg" data-portfolio="9" alt="Изображение портволио" width="225" height="189"
+                    loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="10"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide1.jpg" data-portfolio="11"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="12"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="13"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="14"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="15"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide1.jpg" data-portfolio="16"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="17"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="18"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="19"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="20"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide1.jpg" data-portfolio="21"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="22"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="23"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="24"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="25"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide1.jpg" data-portfolio="26"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="27"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="28"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="29"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="30"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide1.jpg" data-portfolio="31"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="32"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="33"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="34"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="35"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide1.jpg" data-portfolio="36"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="37"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="38"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="39"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="portfolio__image" src="./images/slide3.jpg" data-portfolio="40"
+                    alt="Изображение портволио" width="225" height="189" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
               </div>
-              <div class="portfolio__swiper-nav">
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
-                <div class="portfolio__slider-prev" title="Предыдущий слайд"><img src="./images/icons/swiper-arrow.svg"
-                    alt="Стрелка назад"></div>
-                <div class="portfolio__slider-next" title="Следующий сайт"><img src="./images/icons/swiper-arrow.svg"
-                    alt="Стрелка вперед"></div>
-              </div>
+
+              <div class="swiper-pagination"></div>
+
+              <div class="portfolio__slider-prev" title="Предыдущий слайд"><img src="./images/icons/swiper-arrow.svg"
+                  alt="Стрелка назад"></div>
+              <div class="portfolio__slider-next" title="Следующий сайт"><img src="./images/icons/swiper-arrow.svg"
+                  alt="Стрелка вперед"></div>
             </div>
           </div>
         </section>

@@ -550,6 +550,7 @@ img {
 }
 
 /*portfolio*/
+
 .portfolio {
   padding-block: 57px 77px;
 }
@@ -559,65 +560,74 @@ img {
 }
 
 .portfolio__content {
-  color: black;
-  position: relative;
+  width: 100%;
+  height: 780px;
 }
 
 .portfolio__image {
   cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .swiper {
-  height: 814px;
-  margin: 0 !important;
-  padding-left: 110px;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 135px;
 }
 
 .swiper-wrapper {
-  box-sizing: border-box;
-  /* border-radius: 10px;
-  background-color: #EDEDED;
-  padding: 17px 20px 17px 21px; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 8px;
 }
 
 .swiper-slide {
-  border-radius: 10px;
-  background-color: #EDEDED;
-  padding: 17px 20px 17px 21px;
+  text-align: center;
+  font-size: 18px;
+  /* width: 225px !important; */
+  height: 189px !important;
+  margin-bottom: 8px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  justify-content: center;
+  align-items: center;
 }
 
-.portfolio__swiper-nav {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 34px;
-  height: 116px;
-}
-
-
-.portfolio__slider-prev {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-}
-
+.portfolio__slider-prev,
 .portfolio__slider-next {
   cursor: pointer;
   position: absolute;
-  bottom: 0;
+  left: 0;
+}
+
+.portfolio__slider-prev {
+  top: 42%;
+}
+
+.portfolio__slider-next {
+  bottom: 42%;
   transform: rotate(180deg);
+}
+
+.swiper-button-disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
+  right: auto;
+  left: 8px;
 }
 
 .swiper-pagination-bullet {
   width: 15px;
   height: 15px;
   margin: 10px auto !important;
-  /* background-color: #EDEDED; */
 }
 
 .swiper-pagination-bullet-active {
@@ -817,4 +827,21 @@ img {
   clip-path: inset(50%);
   overflow: hidden;
   white-space: nowrap;
+}
+
+@media (max-width: 1280px) {
+
+  /*prortfolio section*/
+  .portfolio__content {
+    height: 660px;
+  }
+
+  .swiper-wrapper {
+    row-gap: 8px;
+  }
+
+  .swiper-slide {
+    height: 100% !important;
+    max-height: 160px !important;
+  }
 }
