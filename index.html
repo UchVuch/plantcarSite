@@ -9,12 +9,12 @@
   <title>PLANTCAR</title>
   <link href="./css/fonts.css" rel="stylesheet">
   <link href="./css/reset.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
   <link href="./css/swiper-bundle.min.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/media.css" rel="stylesheet">
+  <script defer src="./js/inputmask.min.js"></script>
+  <script defer src="./js/justvalidate.min.js"></script>
   <script defer src="./js/swiper-bundle.min.js"></script>
-  <!-- <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
   <script defer src="./js/index.js"></script>
 </head>
 
@@ -41,7 +41,7 @@
             </a>
           </div>
         </div>
-        <div class="header__nav-close" data-menu="close">
+        <div class="header__nav-close" data-menu="close" title="Закрыть меню">
           <span class="header__nav-close-line"></span>
           <span class="header__nav-close-line"></span>
         </div>
@@ -87,14 +87,14 @@
             </ul>
           </div>
           <div class="hero__form">
-            <form class="form">
+            <form action="mail.php" method="POST" id="headerForm" class="form">
               <p class="form__text">ЗАПИСЬ НА БЕСПЛАТНЫЙ ОСМОТР</p>
               <div class="form__body">
                 <label class="form__label" for="fullName">
-                  <input class="form__input" id="fullName" type="text" placeholder="ФИО">
+                  <input class="form__input" id="headerFullName" name="fullName" type="text" placeholder="ФИО">
                 </label>
                 <label class="form__label" for="phone">
-                  <input class="form__input" id="phone" type="text" placeholder="Номер телефона">
+                  <input class="form__input" id="headerPhone" name="phone" type="tel" placeholder="Номер телефона">
                 </label>
                 <button class="form__button button">ОСТАВИТЬ ЗАЯВКУ</button>
               </div>
@@ -206,7 +206,7 @@
                   <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./images/slide2.jpg" data-portfolio="9" alt="Изображение портволио" width="225" height="189"
+                  <img class="portfolio__image" src="./images/slide2.jpg" data-portfolio="9" alt="Изображение портволио" width="225" height="189"
                     loading="lazy">
                   <div class="swiper-lazy-preloader"></div>
                 </div>
@@ -384,12 +384,12 @@
               ОТПРАВЬТЕ СНИМОК ПОВРЕЖДЕНИЯ И
               ПОЛУЧИТЕ РАСЧЕТ ПО РЕМОНТУ
             </h2>
-            <form class="send__form">
-              <label><input class="form__input" name="namePicture" type="text" placeholder="ФИО"></label>
-              <label><input class="form__input" name="phonePicture" type="text" placeholder="Номер телефона"></label>
-              <label for="sendPicture" class="form__label-picture">
-                Выберите файл
-                <input id="sendPicture" class="form__input" name="picture" type="file" placeholder="Выберите файл">
+            <form action="mail.php" method="POST" id="sendForm" class="send__form" enctype="multipart/form-data">
+              <label class="form__label" for="sendName"><input class="form__input" id="sendFullName" name="name" type="text" placeholder="ФИО"></label>
+              <label class="form__label" for="sendPhone"><input class="form__input" id="sendPhone" name="phone" type="tel" placeholder="Номер телефона"></label>
+              <label for="sendPicture" class="form__label-picture form__label">
+                <span class="file-name">Выберите файл</span>
+                <input id="sendPicture" class="form__input" name="picture" accept=".jpg, .jpeg, .png, .gif" type="file" placeholder="Выберите файл">
               </label>
               <button class="button form__button">ОТПРАВИТЬ</button>
             </form>
@@ -437,6 +437,20 @@
         <a href="#!">Политика конфиденциальности</a>
       </div>
     </footer>
+  </div>
+  <div class="popup">
+    <div class="popup__overlay">
+      <div class="popup__inner">
+        <button class="popup__close" title="Закрыть окно">
+          <span class="popup__close-line"></span>
+          <span class="popup__close-line"></span>
+        </button>
+        <div class="popup__title"></div>
+        <div class="popup__body">
+
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
