@@ -1,163 +1,5 @@
 function startApp() {
-
-  //mask input
-  const headerTel = document.querySelector('#headerPhone')
-  const sendTel = document.querySelector('#sendPhone')
-  const telMask = new Inputmask('+7 999 999-99-99')
-
-  telMask.mask(headerTel)
-  telMask.mask(sendTel)
-
-  //validate form
-  const validationHeaderForm = new JustValidate('#headerForm')
-  const validationSendForm = new JustValidate('#sendForm')
-
-  validationHeaderForm
-    .addField('#headerFullName', [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Введите имя'
-      },
-      {
-        rule: 'minLength',
-        value: 2,
-        errorMessage: 'Имя дожно содержать минимум 2 символа'
-      },
-      {
-        rule: 'maxLength',
-        value: 30,
-        errorMessage: 'Не больше 30 символов'
-      }
-    ])
-    .addField('#headerPhone', [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Телефон обязателен'
-      },
-      {
-        rule: 'function',
-        validator: function () {
-          const phone = headerTel.inputmask.unmaskedvalue()
-          return phone.length === 10
-        },
-        errorMessage: 'Введите корректный телефон'
-      }
-    ]).onSuccess((event) => {
-      console.log('Validation passes and form submitted', event);
-  
-      let formData = new FormData(event.target);
-  
-      console.log(...formData);
-  
-      let xhr = new XMLHttpRequest();
-  
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            console.log('Отправлено');
-          } else {
-            console.log(xhr.status)
-          }
-        }
-      }
-  
-      xhr.open('POST', 'mail.php', true);
-      xhr.send(formData);
-  
-      event.target.reset();
-    })
-
-    validationSendForm
-    .addField('#sendFullName', [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Введите имя'
-      },
-      {
-        rule: 'minLength',
-        value: 2,
-        errorMessage: 'Имя дожно содержать минимум 2 символа'
-      },
-      {
-        rule: 'maxLength',
-        value: 30,
-        errorMessage: 'Не больше 30 символов'
-      }
-    ])
-    .addField('#sendPhone', [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Телефон обязателен'
-      },
-      {
-        rule: 'function',
-        validator: function () {
-          const phone = sendTel.inputmask.unmaskedvalue()
-          return phone.length === 10
-        },
-        errorMessage: 'Введите корректный телефон'
-      }
-    ])
-    .addField('#sendPicture', [
-      {
-        rule: 'minFilesCount',
-        value: 1,
-        errorMessage: 'Выберите файл'
-      },
-      {
-        rule: 'maxFilesCount',
-        value: 1,
-        errorMessage: 'Не больше 1'
-      },
-      {
-        rule: 'files',
-        value: {
-          files: {
-            extensions: ['jpg', 'jpeg', 'png', 'gif'],
-            maxSize: 2 * 1024 * 1024,
-            minSize: 1000,
-            types: ['image/jpeg', 'image/png']
-          },
-        },
-      }
-    ]).onSuccess((event) => {
-      console.log('Validation passes and form submitted', event);
-  
-      let formData = new FormData(event.target);
-  
-      console.log(...formData);
-  
-      let xhr = new XMLHttpRequest();
-  
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            console.log('Отправлено');
-          }
-        }
-      }
-  
-      xhr.open('POST', 'mail.php', true);
-      xhr.send(formData);
-  
-      event.target.reset();
-    })
-
-  const formFile = document.querySelector('#sendPicture')
-  const fileName = document.querySelector('.file-name')
-  console.log(fileName)
-  formFile.addEventListener('change', () => {
-    if (formFile.files[0]) {
-      const file = formFile.files[0]
-      fileName.innerHTML = `${file.name}`
-    } else {
-      fileName.innerHTML = `Выберите файл`
-    }
-  })
+  window.dataLayer = window.dataLayer || []
 
   // burger menu
   const buttonOpenMenu = document.querySelector(`[data-menu="open"]`)
@@ -175,15 +17,18 @@ function startApp() {
   // popup
   const body = document.querySelector('.body')
   const popup = document.querySelector('.popup')
+  const popupBody = document.querySelector('.popup__body')
   const closePopupButton = document.querySelector('.popup__close')
 
   const openPopup = () => {
     popup.classList.add('popup--open')
     body.classList.add('body--lock')
+    // popupBody.innerHTML = ``
   }
   const closePopup = () => {
     popup.classList.remove('popup--open')
     body.classList.remove('body--lock')
+    popupBody.innerHTML = ``
   }
 
   closePopupButton.addEventListener('click', closePopup)
@@ -255,9 +100,6 @@ function startApp() {
             prevEl: '.popup-swiper-prev',
           },
           breakpoints: {
-            376: {
-              slidesPerView: 2,
-            },
             541: {
               slidesPerView: 3,
               slidesPerGroup: 3,
@@ -269,7 +111,7 @@ function startApp() {
       }
     }
     const cleanPopup = () => {
-      popupSwiper.destroy(true, true)
+      if(popupSwiper) popupSwiper.destroy(true, true)
       popupBody.innerHTML = ``
     }
 
@@ -314,6 +156,176 @@ function startApp() {
           el: ".swiper-pagination",
         },
       },
+    }
+  })
+
+  //mask input
+  const headerTel = document.querySelector('#headerPhone')
+  const sendTel = document.querySelector('#sendPhone')
+  const telMask = new Inputmask('+7 999 999-99-99')
+
+  telMask.mask(headerTel)
+  telMask.mask(sendTel)
+
+  //validate form
+  const validationHeaderForm = new JustValidate('#headerForm')
+  const validationSendForm = new JustValidate('#sendForm')
+
+  validationHeaderForm
+    .addField('#headerFullName', [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите имя'
+      },
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Имя дожно содержать минимум 2 символа'
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Не больше 30 символов'
+      }
+    ])
+    .addField('#headerPhone', [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Телефон обязателен'
+      },
+      {
+        rule: 'function',
+        validator: function () {
+          const phone = headerTel.inputmask.unmaskedvalue()
+          return phone.length === 10
+        },
+        errorMessage: 'Введите корректный телефон'
+      }
+    ]).onSuccess((event) => {
+      console.log('Validation passes and form submitted', event);
+
+      let formData = new FormData(event.target);
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log('Отправлено');
+            window.dataLayer.push({ 'event': 'Lead' })
+            openPopup()
+            popupBody.insertAdjacentHTML('afterbegin', `
+              <div class="success-message">
+                <div class="success-massage__inner">
+                  <div class="success-message__title">Спасибо за заявку!</div>
+                  <div class="success-message__text">В ближайшее время с вами свяжется наш специалист</div>
+                </div>
+              </div>
+            `)
+          } else {
+            console.log(xhr.status)
+          }
+        }
+      }
+
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+
+      event.target.reset();
+    })
+
+  validationSendForm
+    .addField('#sendFullName', [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите имя'
+      },
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Имя дожно содержать минимум 2 символа'
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Не больше 30 символов'
+      }
+    ])
+    .addField('#sendPhone', [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Телефон обязателен'
+      },
+      {
+        rule: 'function',
+        validator: function () {
+          const phone = sendTel.inputmask.unmaskedvalue()
+          return phone.length === 10
+        },
+        errorMessage: 'Введите корректный телефон'
+      }
+    ])
+    .addField('#sendPicture', [
+      {
+        rule: 'minFilesCount',
+        value: 1,
+        errorMessage: 'Выберите файл'
+      },
+      {
+        rule: 'files',
+        value: {
+          files: {
+            extensions: ['jpg', 'jpeg', 'png', 'gif'],
+            maxSize: 2 * 1024 * 1024,
+            minSize: 1000,
+          },
+        },
+      }
+    ]).onSuccess((event) => {
+      console.log('Validation passes and form submitted', event);
+
+      let formData = new FormData(event.target);
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log('Отправлено')
+            window.dataLayer.push({ 'event': 'Lead' })
+            openPopup()
+            popupBody.insertAdjacentHTML('afterbegin', `
+              <div class="success-message">
+                <div class="success-massage__inner">
+                  <div class="success-message__title">Спасибо за заявку!</div>
+                  <div class="success-message__text">В ближайшее время с вами свяжется наш специалист</div>
+                </div>
+              </div>
+            `)
+          }
+        }
+      }
+
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+
+      event.target.reset();
+      const fileName = document.querySelector('.file-name')
+      fileName.innerHTML = `Выберите файл`
+    })
+
+  const formFile = document.querySelector('#sendPicture')
+  const fileName = document.querySelector('.file-name')
+  formFile.addEventListener('change', () => {
+    if (formFile.files[0]) {
+      const file = formFile.files[0]
+      fileName.innerHTML = `${file.name}`
+    } else {
+      fileName.innerHTML = `Выберите файл`
     }
   })
 }
